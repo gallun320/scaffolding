@@ -1,0 +1,35 @@
+.nav-top
+  height: 100px
+  background: $black
+  position: relative
+
+.nav-right
+  float: right
+
+.nav-left
+  float: left
+
+.nav-inline
+  display: inline-block
+  font-size: 0
+
+.nav-item
+  @include type($list-font-size, $white)
+  padding: $indent/3
+  width: auto
+  height: auto
+
+  &:hover
+    background: darken($blue,20%)
+    transition: background 1s
+
+.nav-item--active
+  background: darken($blue,20%)
+
+
+.nav-side
+  padding: $indent/2
+  width: auto
+  height: auto
+  background: $gray
+  

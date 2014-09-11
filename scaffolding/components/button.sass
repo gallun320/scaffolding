@@ -6,14 +6,11 @@
 .btn
 	width: $btn-size-medium
 	background: $btn-primary-backround-color
-	text-align: $btn-text-align
 	font-family: $body-font-family
-	border-radius: $btn-radius
-	line-height: $btn-line-height
-	font-size: $btn-font-size
-	color: $btn-text-color
+	@include type($btn-font-size, $btn-font-color)
 	text-align: $btn-text-align
 	height: $btn-size-medium / 2
+  border-radius: $btn-radius
 	border: none
 	outline: none
 	padding: $indent/2
@@ -74,23 +71,20 @@
 	width: $btn-size-large-x
 	height: $btn-size-large-x / 2
 
-//Button active
-
-.btn-active
-  
-  &:active
-	box-shadow: $btn-active-inset-shadow
-
-.btn-shadow
-  
-  &:hover
-	background: $white
-	border: $blue
-	color: $blue
 
 
 //Button center
 .btn-center
 	width: 50%
 	margin: 0 auto
+
+.shadow-btn
+  background: rgba(0,0,0,0)
+  @include type($btn-font-size, $blue)
+  border: 1px solid $blue
+  transition: all 1s
+
+  &:hover
+    background: $blue
+    color: $white
 
