@@ -1,0 +1,64 @@
+.menu
+  width: 600px
+  height: 150px
+  @include flexbox
+  margin:
+    top: $indent
+
+
+.menu-item-header-icon
+  background-repeat: no-repeat
+  background-position: center 
+  margin: 
+    left: $indent
+  width: 250px 
+  height: 175px
+
+.menu-item-visibility-icon
+  visibility: hidden
+
+
+.menu-item-icon
+  @extend .menu-item-header-icon
+  width: 100px
+  background-size: contain
+
+.menu-flex
+  width: 100%
+  height: 175px
+  @include flexbox
+  margin:
+    top: $indent
+
+  &:nth-child(1)
+    margin:
+      top: 0
+
+.menu-indent-top-2x
+  margin:
+    top: $indent*2
+
+.menu-indent-top-3x
+  margin:
+    top: $indent*3
+
+
+
+.menu-header
+  @include type(2.2rem, $paragraph-font-color)
+  margin:
+    top: $indent
+    left: $indent
+
+.column
+
+  .menu-header-green
+    color: #bee4c7
+
+  .l-menu-item-header-icon
+    background-position: left
+
+.menu-item-text
+  @include type($header-font-size, #222)
+    
+ 

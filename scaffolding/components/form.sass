@@ -1,0 +1,62 @@
+.form
+  background: $gray
+  padding: $indent
+
+
+.form__header
+  @include type($header-font-size, $paragraph-font-color)
+  text-align: $second-text-align
+  margin: 
+    top: 0
+
+
+
+.form__wrapper
+  float: left
+  width: 50%
+  padding:
+    left: $indent/2
+    right: $indent/2
+
+  margin:
+    top: $indent
+    
+
+.form__label
+  display: block
+  @include type($paragraph-font-size, $header-font-color)
+
+.form__input
+  outline: none
+  border: none
+  width: 100%
+  padding:
+    left: $indent/4
+    right: $indent/4
+    top: $indent/4
+    bottom: $indent/4
+  margin: 
+    top: $indent/3
+  @include type($input-font-size, $input-text-color)
+
+  &::-webkit-input-placeholder
+    color: $input-text-color
+
+  &:-moz-placeholder
+    color: $input-text-color
+
+
+.form__textarea
+  border: none
+  outline: none
+  @include type($input-font-size, $input-text-color)
+  resize: none
+  display: block
+  padding: $indent/2
+  background: $gray
+
+
+.form--background-color
+  background: rgba(0,0,0,0)
+
+
