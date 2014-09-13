@@ -37,19 +37,19 @@
     bottom: $indent/4
   margin: 
     top: $indent/3
-  @include type($input-font-size, $input-text-color)
+  @include type($input-font-size, $input-font-color)
 
   &::-webkit-input-placeholder
-    color: $input-text-color
+    color: $input-font-color
 
   &:-moz-placeholder
-    color: $input-text-color
+    color: $input-font-color
 
 
 .form__textarea
   border: none
   outline: none
-  @include type($input-font-size, $input-text-color)
+  @include type($input-font-size, $input-font-color)
   resize: none
   display: block
   padding: $indent/2
