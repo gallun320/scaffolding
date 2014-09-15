@@ -9,13 +9,17 @@
 
 .header__logo
   width: $header-logo-width
-  padding: $indent/2
+  margin: $indent/2
 
   img
     max-width: $image-max-width
 
+.header--right
+  float: right
+   
+.header--left
+  float: left
 
-
-.header__text
+.header__title
   @include type($header-font-size, $header-font-color)
   width: 100%

@@ -1,6 +1,9 @@
 .form
   background: $gray
   padding: $indent
+  margin: 
+    top: $indent
+    bottom: $indent
 
 
 .form__header
@@ -20,11 +23,14 @@
 
   margin:
     top: $indent
+  
+  &:after
+    @include clearfix
     
 
 .form__label
   display: block
-  @include type($paragraph-font-size, $header-font-color)
+  @include type($input-font-size, $input-font-color)
 
 .form__input
   outline: none

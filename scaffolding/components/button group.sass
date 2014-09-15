@@ -1,7 +1,12 @@
 .btn-group > .btn
   display: inline-block
   float: left
-  margin: 0 2px
+  margin: $indent/2 2px
+  
+.btn-group
+  
+  &:after
+    @include clearfix
 
 
 .round > .btn

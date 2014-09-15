@@ -8,33 +8,45 @@
   @include type($btn-font-size, $btn-font-color)
   text-align: $btn-text-align
   border-radius: $btn-radius
-  border: none
+  border: 1px solid $btn-primary-background-color
   outline: none
   padding: $indent/2
+  transition: all 0.5s
+  cursor: pointer
+  margin: 
+    top: $indent/2
+    bottom: $indent/2
+  display: block
 	
   &:hover
-    background: darken($btn-primary-background-color, 50%)
+    border: 1px solid $btn-primary-background-color
+    background: darken($btn-primary-background-color, 10%)
 	
 
 //Button access
 
-.btn-access
+.btn--access
   background: $btn-access-background-color
+  border: 1px solid $btn-access-background-color
 
   &:hover
-    background: darken($btn-access-background-color, 50%)
-
+    border: 1px solid $btn-access-background-color
+    background: darken($btn-access-background-color, 10%)
+    
 	
 
 
 //Button alert		
 
 
-.btn-alert
+.btn--alert
   background: $btn-alert-background-color
+  border: 1px solid $btn-alert-background-color
+
 
   &:hover
-    background: darken($btn-alert-background-color, 50%)
+    border: 1px solid $btn-alert-background-color
+    background: darken($btn-alert-background-color, 10%)
 
 
 
@@ -42,44 +54,49 @@
 //Button prepare
 
 
-.btn-prepare
+.btn--prepare
   background: $btn-prepare-background-color
+  border: 1px solid $btn-prepare-background-color
 
   &:hover
-    background: darken($btn-prepare-background-color, 50%)
+    border: 1px solid $btn-prepare-background-color
+    background: darken($btn-prepare-background-color, 10%)
 
 
 
 //Button size tiny
 
-.btn-tiny
+.btn--tiny
   width: $btn-size-tiny
-  height: $btn-size-tiny / 2
+
+  
+.btn--medium
+  width: $btn-size-medium
 
 //Button size large
 
-.btn-large
+.btn--large
   width: $btn-size-large
-  height: $btn-size-large / 2
+  
 
 //Button size large-x
 
-.btn-large-x
+.btn--large-x
   width: $btn-size-large-x
-  height: $btn-size-large-x / 2
+  
 
 
 
 //Button center
-.btn-center
+.btn--center
   width: 50%
   margin: 0 auto
 
-.shadow-btn
+.shadow--btn
   background: rgba(0,0,0,0)
   @include type($btn-font-size, $blue)
   border: 1px solid $blue
-  transition: all 1s
+  transition: all 0.4s
 
   &:hover
     background: $blue

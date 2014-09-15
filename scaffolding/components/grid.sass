@@ -14,14 +14,19 @@ ul, li
   list-style: none
 
 
+.row-full
+  width: 100%
+  
+  &:after
+    @include clearfix
+  
+  
 .row
   max-width: $row-width
   margin: 0 auto
 
   &:after
-    content: ''
-    clear: both
-    display: table 
+    @include clearfix
   
   .row
     margin:
