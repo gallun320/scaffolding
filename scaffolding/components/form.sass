@@ -1,5 +1,5 @@
 .form
-  background: $gray
+  background: $base-color
   padding: $indent
   margin: 
     top: $indent
@@ -28,11 +28,11 @@
     @include clearfix
     
 
-.form__label
+label
   display: block
   @include type($input-font-size, $input-font-color)
 
-.form__input
+input
   outline: none
   border: none
   width: 100%
@@ -52,14 +52,14 @@
     color: $input-font-color
 
 
-.form__textarea
+textarea
   border: none
   outline: none
   @include type($input-font-size, $input-font-color)
   resize: none
   display: block
   padding: $indent/2
-  background: $gray
+  background: $base-color
 
 
 .form--background-color

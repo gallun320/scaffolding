@@ -1,6 +1,6 @@
 .nav-top
   height: 100px
-  background: $black
+  background: $second-color
   position: relative
   padding: $indent/2
 
@@ -15,7 +15,7 @@
   font-size: 0
 
 .nav-item
-  @include type($list-font-size, $white)
+  @include type($list-font-size, $third-color)
   padding: $indent/3
   width: auto
   height: auto
@@ -23,18 +23,18 @@
   cursor: pointer
 
   &:hover
-    background: darken($blue,10%)
+    background: darken($priamary-color,10%)
     
 
 .nav-item--active
-  background: darken($blue,5%)
+  background: darken($priamary-color,5%)
 
 
 .nav-side
   padding: $indent/2
   width: auto
   height: auto
-  background: $gray
+  background: $base-color
   
 
   

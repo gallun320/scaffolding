@@ -16,7 +16,7 @@
   margin: 
     top: $indent/2
     bottom: $indent/2
-  display: block
+  display: inline-block
 	
   &:hover
     border: 1px solid $btn-primary-background-color
@@ -63,6 +63,17 @@
     background: darken($btn-prepare-background-color, 10%)
 
 
+//Shadow button
+
+.btn--shadow
+  background: rgba(0,0,0,0)
+  @include type($btn-font-size, $priamary-color)
+  border: 1px solid $priamary-color
+  transition: all 0.4s
+
+  &:hover
+    background: $priamary-color
+    color: $third-color
 
 //Button size tiny
 
@@ -92,13 +103,5 @@
   width: 50%
   margin: 0 auto
 
-.shadow--btn
-  background: rgba(0,0,0,0)
-  @include type($btn-font-size, $blue)
-  border: 1px solid $blue
-  transition: all 0.4s
 
-  &:hover
-    background: $blue
-    color: $white
 

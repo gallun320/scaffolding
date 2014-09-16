@@ -46,7 +46,7 @@
 
 .list
   padding: $indent
-  background: $gray
+  background: $base-color
   max-width: 400px
   margin: $indent auto
   list-style: none
@@ -86,12 +86,14 @@
   cursor: pointer
 
   &:hover
-    background: $blue
-    color: $white
+    background: $priamary-color
+    color: $third-color
 
     
 .list-header
   @include type($header-font-size, $list-font-color)
   text-align: center
 
+.no-bulet
+  list-type: none
 

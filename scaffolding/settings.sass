@@ -4,20 +4,21 @@ $default-indent: 0
 
 // //Grid
 
-// $row-width: 1200px
-// $column-count: 12
-// $indent: 30px
+$row-width: 1200px
+$column-count: 12
+$indent: 30px
 
 
 // //Color
-$white: #fff
-$blue: #428bca
-$red: #FD0006
-$green: #00CC00
-$yellow: #FFC000 
-$gray: #f7f7f9
-$gray-darken: darken($gray, 30%)
-$black: #000
+$priamary-color: #428bca
+$alert-color: #FD0006
+$access-color: #00CC00
+$prepare-color: #FFC000 
+$base-color: #f7f7f9
+$base-color--darken: darken($base-color, 30%)
+$second-color: #000
+$third-color: #fff
+
 
 
 // ////////////////////////////////////////////////////
@@ -38,7 +39,7 @@ $image-max-width: 100%
 
 // //Background
 
-$body-bg: $gray
+$body-bg: $base-color
 
 // ///////////////////////////////////////////////////
 
@@ -66,7 +67,6 @@ $label-line-height: $paragraph-line-height
 
 // //Font-size
 
-
 $header-font-size: 1.7rem 
 $paragraph-font-size: 1.5rem
 $link-font-size: $paragraph-font-size
@@ -79,12 +79,12 @@ $label-font-size: $paragraph-font-size
 // //Font-color
 
 
-$header-font-color: $gray-darken
-$paragraph-font-color: darken($white, 50%)
+$header-font-color: $base-color--darken
+$paragraph-font-color: darken($third-color, 50%)
 $list-font-color: $paragraph-font-color
-$link-font-color: $blue
+$link-font-color: $priamary-color
 $input-font-color: $paragraph-font-color
-$btn-font-color: $white
+$btn-font-color: $third-color
 $label-font-color: $paragraph-font-color
 
 
@@ -111,8 +111,8 @@ $link-font-variant: $header-font-variant
 // //Text-decoration
 
 
-$link-default-text-decoration: none
-$link-hover-text-decoration: underline
+$link-default-text-decoration: underline
+$link-hover-text-decoration: none
 
 
 // ////////////////////////////////////////////////////////
@@ -138,10 +138,10 @@ $btn-size-large-x: 100%
 // //Button background color
 
 
-$btn-primary-background-color: $blue
-$btn-access-background-color: $green
-$btn-alert-background-color: $red
-$btn-prepare-background-color: $yellow
+$btn-primary-background-color: $priamary-color
+$btn-access-background-color: $access-color
+$btn-alert-background-color: $alert-color
+$btn-prepare-background-color: $prepare-color
 
 
 
@@ -158,10 +158,10 @@ $btn-active-inset-shadow: inset 0px -2px  0 0 #000
 
 // //Button border color
 
-$btn-primary-border-color: $blue
+$btn-primary-border-color: $priamary-color
 $btn-access-border-color: $btn-access-background-color
 $btn-alert-border-color: $btn-alert-background-color
-$btn-prepare-border-color: $yellow
+$btn-prepare-border-color: $prepare-color
 
 
 
