@@ -14,17 +14,19 @@ $large: 1200px !default
 
 .row-full
   width: 100%
+  @include flexbox
+  flex-wrap: wrap
+  flex-direction: row
   
-  &:after
-    @include clearfix
   
   
 .row
   max-width: $row-width
   margin: 0 auto
+  @include flexbox
+  flex-wrap: wrap
+  flex-direction: row
 
-  &:after
-    @include clearfix
   
   .row
     margin:
@@ -33,7 +35,6 @@ $large: 1200px !default
 
 
 .column, .columns
-  float: left
   padding:
     left: $indent/2
     right: $indent/2 
@@ -41,7 +42,8 @@ $large: 1200px !default
 
 @for $i from 1 through $column-count
   .small-#{$i}
-    width: $size * $i
+    max-width: $size * $i
+    flex-basis: $size * $i
     
 @for $i from 0 through $column-count - 1
   .small-offset-#{$i}
@@ -52,7 +54,8 @@ $large: 1200px !default
 @media (min-width: $medium)
   @for $i from 1 through $column-count
     .medium-#{$i}
-      width: $size * $i
+      max-width: $size * $i
+      flex-basis: $size * $i
     
   
   @for $i from 0 through $column-count - 1
@@ -64,7 +67,8 @@ $large: 1200px !default
 @media (min-width: $large)
   @for $i from 1 through $column-count
     .large-#{$i}
-      width: $size * $i
+      max-width: $size * $i
+      flex-basis: $size * $i
   
       
   @for $i from 0 through $column-count - 1
@@ -75,8 +79,7 @@ $large: 1200px !default
 
 .medium-centerd
   margin: 0 auto
-  clear: both
-  float: none
+  
 
 .large-centerd
   @extend .medium-centerd

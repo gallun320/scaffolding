@@ -8,3 +8,30 @@
   top: 0
   padding: $indent/2
   
+  
+.popup__wrapper
+  background: rgba(0,0,0,0.5)
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 80
+  display: none
+    
+  .popup
+    max-width: $popup-width
+    position: relative
+    background: #fff
+    transform: translateY(8rem)
+    z-index: 90
+    
+.popup__footer
+  background: #aaa
+  margin: 
+    top: -$indent/2
+    left: -$indent/2
+    right: -$indent/2
+    
+.popup-show
+  display: block

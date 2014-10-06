@@ -1,0 +1,45 @@
+.steps
+  @include flexbox
+  width: 800px
+  margin: 0 auto
+  padding:
+    top: $indent*2
+  
+
+.step
+  width: 100px
+  height: 100px
+  border:
+    radius: 50%
+  margin:
+    left: 250px
+  border: 5px solid #FC5C60
+  padding:
+    top: $indent*1.5
+  text-align: center
+  transition: all 0.2s ease
+  cursor: pointer
+  
+  &:nth-child(1)
+    margin:
+      left: 0
+    
+  &:hover
+    background: #FC5C60
+    
+    h1,h2,h3,h4,h5,h6
+      color: #fff
+    
+  h1,h2,h3,h4,h5,h6
+    color: #FC5C60
+    margin: 0
+    line-height: 0
+
+.step-active
+  background: #FC5C60
+  
+  h1,h2,h3,h4,h5,h6
+    color: #fff
+
+.section
+  display: none    
