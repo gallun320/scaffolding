@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="../assets/js/jquery-2.1.1.min.js"></script>
+  <script src="../assets/js/popup.js"></script>
+  <script src="../assets/js/action.js"></script>
+  <script src="../assets/js/slider.js"></script>
+  <meta charset="UTF-8" />
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../public/css/scaffolding.css" />
+   <script>
+    $(document).ready(function () {
+      $(".custom-option:first-of-type").hover(function () {
+        $(this).parents(".custom-options").addClass("option-hover");
+      }, function () {
+        $(this).parents(".custom-options").removeClass("option-hover");
+      });
+      $(".custom-select-trigger").on("click", function () {
+        $('html').one('click', function () {
+          $(".custom-select").removeClass("opened");
+        });
+        $(this).parents(".custom-select").toggleClass("opened");
+        event.stopPropagation();
+      });
+      $(".custom-option").on("click", function () {
+        $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
+        $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
+        $(this).addClass("selection");
+        $(this).parents(".custom-select").removeClass("opened");
+        $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+      });
+    });
+  </script>
+</head>
+
+<body id="wrap" row-full="">
+ <aside class="winilla_cab_publish__sidebar" small="2">
+    <h2 style="margin-left: 10px;">Меню</h2>
+    <button class="btn btn--alert" >Скрытые</button>
+    <button class="btn btn--prepare" >В ожидании</button>
+    <button class="btn btn--access" >Активированны</button>
+    <button class="btn">Список</button>
+    <div class="custom-select-wrapper">
+      <select name="sources" id="sources" class="custom-select sources" placeholder="Выбрать город" style="margin-left: 10px; display: none;">
+        <option value="kazan">Казань</option>
+        <option value="samara">Самара</option>
+        <option value="moscow">Москва</option>
+      </select>
+      <div class="custom-select sources"><span class="custom-select-trigger">Выбрать город</span>
+        <div class="custom-options">
+          <span class="custom-option undefined selection" data-value="kazan">Казань</span>
+          <span class="custom-option undefined" data-value="samara">Самара</span>
+          <span class="custom-option undefined" data-value="moscow">Москва</span>
+        </div>
+      </div>
+    </div>
+ </aside>
+  <section class="table" style="margin-top: 80px; margin-left: 300px;" small="9">
+    <ul row-full="" class="table__row winilla_cab_publish__row">
+      <li class="table__cell">Название места</li>
+      <li class="table__cell">Адрес места</li>
+      <li class="table__cell">Телефона места</li>
+      <li class="table__cell">Количество фоток</li>
+      <li class="table__cell">Дата</li>
+      <li class="table__cell">Отправить письмо</li>
+  
+      <li class="table__cell no-margin">Убрать место</li>
+
+    </ul>
+    <ul row-full="" class="table__row winilla_cab_publish__row">
+      <li class="table__cell">Lorem ipsum.</li>
+      <li class="table__cell">Lorem ipsum.</li>
+      <li class="table__cell">888888888</li>
+      <li class="table__cell"><h2 class="no-margin">98</h2><a href="" class="link">Посмотреть фото места</a></li>
+      <li class="table__cell">14.03</li>
+      <li class="table__cell"><input type="text"></li>
+      <li class="table__cell no-margin"><button class="btn">Отправить</button></li>
+
+    </ul>
+  </section>
+</body>
+
+</html>

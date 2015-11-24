@@ -1,0 +1,104 @@
+extends ./layout/layout.jade
+block content
+  .row-full.popup__wrapper#preloader
+    .preloader__wrapper(style="text-align: center; padding-top: 20%;")
+      img(src="/assets/img/loading-spin.svg")
+  .row-full#modal
+  .row-full#user-list__modal
+  #header
+    .row-full.competition-bg
+      .competition-bg__inner(style="background-image: url('//cdn.winilla.com/media/346x221/86218d897c_77485')")
+      div(row="")
+        .small-12.column.winilla-nav--border.winilla-nav--border-color.l-winilla-nav
+          ul.nav-inline.nav--no-bullet.l-winilla-nav-inner.indent-pad-top#nav-starter
+            img(src="/assets/img/logo_Winilla_white_shadow.png").flex-img.link-block
+            li.nav-item.indent-left.nav--indent-top.winilla-nav__item.winilla--text-transform.text-color.white-hover
+              a.unlink(href="/privacy") Конфиденциальность
+            li.nav-item.nav--indent-top.winilla-nav__item.winilla--text-transform.text-color.white-hover
+              a.unlink(href="/contacts") Контакты
+            li.nav-item.nav--indent-top.winilla-nav__item.winilla--text-transform.text-color.white-hover
+            a.unlink(href="/publishers") Для рекламодателей
+      div(row="")
+        .small-4.column.icon.circle-big-logo.indent-top
+
+      div(row="")
+        .small-6.small-centerd.column
+          h1.winilla--text-transform.text-color.align WINILLA BEAUTY 08/15
+          .nav-inline.align-item
+            .winilla-box__icon-ok.icon
+            h2.winilla-box__sell__text Заведение подтвеждено Winilla и участвует в бонусной системе
+
+
+    .row-full#nav
+      .row.align-item.nav-inline
+        .small-12
+          ul.nav-top.row-full.no-padding.no-margin.winilla-content-nav
+            div(small="12").mobile-menu.nav-inline
+              div(small="1")
+                .btn__triangle-open.pos-rel.nav-inline.justify-center.align-item
+
+              div(small="11").mobile-menu__content.align-item--end.nav-inline.justify-center
+
+
+              ul.list-dropdown.l-list-dropdown--menu-mobile
+                li.list-dropdown__item
+                  a(href="/competition").unlink Конкурсы
+                li.list-dropdown__item
+                  a(href="/photo").unlink Фото
+                li.list-dropdown__item
+                  a(href="/feed").unlink Лента
+            li#competition.nav-inline.align-item.justify-center.li-invise.active-triangle(small="3")
+
+              .icon.icon__cup.sprites--add
+              h2.winilla--text-transform.text__cup
+                a(href="/competition") Конкурсы
+
+
+            li#photo.nav-inline.align-item.justify-center.pos-rel.li-invise(small="3")
+
+              .icon.icon__photo.sprites--add
+              h2.winilla--text-transform.text__photo
+                a(href="/photo") Фото
+
+            li#feed.nav-inline.align-item.justify-center.pos-rel.li-invise(small="3")
+
+              //.icon.icon__photo.sprites--add
+              h2.winilla--text-transform.text__photo
+                a(href="/feed") Лента
+
+            li#info.nav-inline.align-item.justify-center.pos-rel(small="3")
+              //<!--<div class="icon icon__photo sprites--add"></div>-->
+              h2.winilla--text-transform.text__photo
+                a(href="/info") Информация
+
+          //ul.row-full.no-padding.justify-center.no-margin.space-around.align-item.pos-rel
+            li.large-3.medium-6.small-12.nav-inline.justify-center.nav-competition__item-1.nav-competition__item.align-item
+              .nav-competition__content
+                h2.nav-competition__text
+                  a(href="#").unlink Конкурсы
+            .line.align-item
+            li.large-3.medium-6.small-12.nav-inline.justify-center.nav-competition__item-2.nav-competition__item.align-item
+              .nav-competition__content
+                h2.nav-competition__text
+                  a(href="#").unlink Фото
+            .line.align-item
+            li.large-3.medium-6.small-12.nav-inline.justify-center.nav-competition__item-3.nav-competition__item.align-item
+              .nav-competition__content
+                h2.nav-competition__text
+                  a(href="#").unlink Информация
+            .line.align-item
+            li.large-3.medium-6.small-12.nav-inline.justify-center.nav-competition__item-4.nav-competition__item.align-item
+              .nav-competition__content
+                h2.nav-competition__text
+                  a(href="#").unlink Лента
+
+    .row-full.winilla-box__wrapper#places-container
+      .small-12.column.nav--indent-top
+        .row-full
+          .large-3.medium-6.small-6.column.nav--indent-top
+            div(style="background-image: url('//cdn.winilla.com/media/200x268/5d268115dc_79000');").winilla-photo-content
+
+
+
+
+
